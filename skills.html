@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Skills</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:['wordtree']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(
+          [ ['Phrases'],
+            ['Skills'],
+            ['Skills Tech Languages'],
+            ['Skills Tech Languages Python'],
+            ['Skills Tech Languages C'],
+            ['Skills Tech Languages C++'],
+            ['Skills Tech Languages Java'],
+            ['Skills Tech Languages C#'],
+            ['Skills Tech Languages MATLAB'],
+            ['Skills Tech AI'],
+            ['Skills Tech AI Machine-Learning'],
+            ['Skills Tech AI Deep-Learning'],
+            ['Skills Tech AI Computer-Vision'],
+            ['Skills Tech AI Libraries'],
+            ['Skills Tech AI Libraries Keras'],
+            ['Skills Tech AI Libraries PyTorch'],
+            ['Skills Tech AI Libraries TensorFlow'],
+            ['Skills Tech Web FrontEndBackEnd'],
+            ['Skills Tech Web BackEnd SQLServer'],
+            ['Skills Tech Web BackEnd PHP'],
+            ['Skills Tech Web BackEnd MySQL'],
+            ['Skills Tech Web BackEnd Wamp-server'],
+            ['Skills Tech Web BackEnd NoSQL'],
+            ['Skills Tech Web BackEnd Python-Flask'],
+            ['Skills Tech Web FrontEnd'],
+            ['Skills Tech Web FrontEnd HTML'],
+            ['Skills Tech Web FrontEnd AJAX'],
+            ['Skills Tech Web FrontEnd XML'],
+            ['Skills Tech Web FrontEnd JSON'],
+            ['Skills Tech Web FrontEnd JQuery'],
+            ['Skills Tech Hardware RaspBerry Pi'],
+            ['Skills Tech Hardware Arduino'],
+            ['Skills Tech Hardware 8085up'],
+            ['Skills Tech Cloud GCP'],
+            ['Skills Tech Cloud AWS'],
+            ['Skills Tech Project-Management Project_Libre'],
+            ['Skills Non-tech Designing Adobe-Spark'],
+            ['Skills Non-tech Designing MS-PowerPoint'],
+            ['Skills Non-tech Designing Gimp'],
+            ['Skills Non-tech Designing AutoCAD'],
+            ['Skills Non-tech MS-Word'],
+            ['Skills Non-tech MS-Excel'],
+            ['Skills Non-tech MS-Word'],
+            ['Skills Non-tech Face-Portrait'],
+            ['Skills Non-tech Sketching'],
+
+          ]
+        );
+
+        var options = {
+          wordtree: {
+            format: 'implicit',
+            word: 'Skills'
+          }
+        };
+
+        var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wordtree_basic" style="width: 1000px; height: 600px;"></div>
+  </body>
+</html>

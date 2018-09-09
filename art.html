@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Art Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body {
+  text-align:center;
+  background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color:#555;
+  font-family:'Roboto';
+  font-weight:300;
+  font-size:20px;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  margin: 0;
+}
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #168fe0;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<ul class="sidenav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About me</a></li>
+  <li><a href="geek.html">Geeksville</a></li>
+  <li><a class = "active" href="art.html">Artsville</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+<div style="margin-left:15%;padding:1px 16px;">
+  <h3>Progress order: Good(top) -> Okay(bottom)</h3>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/36.jpg">
+        <img src="images/36.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Elon Musk</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/35.jpg">
+        <img src="images/35.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/34.jpg">
+        <img src="images/34.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Yeah, that's me!</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/33.jpg">
+        <img src="images/33.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Seems like a Lamborghini</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/32.jpg">
+        <img src="images/32.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Kevin (Minions)</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/31.jpg">
+        <img src="images/31.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/30.jpg">
+        <img src="images/30.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/29.jpg">
+        <img src="images/29.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/28.jpg">
+        <img src="images/28.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/27.jpg">
+        <img src="images/27.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/26.jpg">
+        <img src="images/26.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Emma Watson? Umm, not so much</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/25.jpg">
+        <img src="images/25.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/24.jpg">
+        <img src="images/24.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Mandala artwork</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/23.jpg">
+        <img src="images/23.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Idk, Alvin and the chipmunks</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/22.jpg">
+        <img src="images/22.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/21.jpg">
+        <img src="images/21.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/20.jpg">
+        <img src="images/20.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Some Owl</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/19.jpg">
+        <img src="images/19.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Gift</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/18.jpg">
+        <img src="images/18.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">A Cutie Pie!</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/17.jpg">
+        <img src="images/17.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">That's a scary cat!</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/16.jpg">
+        <img src="images/16.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">PopEye ;)-'</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/15.jpg">
+        <img src="images/15.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Dedicated to a faculty</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/14.jpg">
+        <img src="images/14.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Custom Order</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/13.jpg">
+        <img src="images/13.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Ganesh &lt;3</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/12.jpg">
+        <img src="images/12.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">GrandPaa</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://www.facebook.com/Nachiket-Makwana-Arts-1230537713652798/">
+        <img src="images/11.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">My Fb Art Page Logo</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/10.jpg">
+        <img src="images/10.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Martin Luther King Jr.</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/9.jpg">
+        <img src="images/9.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Bat-Mobile</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/8.jpg">
+        <img src="images/8.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">I won't find this Dory!</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/7.jpg">
+        <img src="images/7.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Eiffel Tower :o</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/6.jpg">
+        <img src="images/6.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Jerry and Tom</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/5.jpg">
+        <img src="images/5.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Big Cat</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/4.jpg">
+        <img src="images/4.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Bun</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/3.jpg">
+        <img src="images/3.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Pareidolia</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/2.jpg">
+        <img src="images/2.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Basic Features</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/1.jpg">
+        <img src="images/1.jpg" width="20%" height="20%">
+      </a>
+      <div class="desc">Geometry on weed</div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+
+</body>
+</html>
